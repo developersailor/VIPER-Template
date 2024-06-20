@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>AllowedTypes</key>
+    <array>
+        <string>public.swift-source</string>
+    </array>
+    <key>DefaultCompletionName</key>
+    <string>File</string>
+    <key>Description</key>
+    <string>Create a new VIPER Module</string>
+    <key>Kind</key>
+    <string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+    <key>Platforms</key>
+    <array>
+        <string>com.apple.platform.iphoneos</string>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Description</key>
+            <string>The name of the module to create.</string>
+            <key>Identifier</key>
+            <string>ModuleName</string>
+            <key>Name</key>
+            <string>New VIPER Module name:</string>
+            <key>NotPersisted</key>
+            <true/>
+            <key>Required</key>
+            <true/>
+            <key>Type</key>
+            <string>text</string>
+        </dict>
+        <dict>
+            <key>Default</key>
+            <string>___VARIABLE_ModuleName:identifier___</string>
+            <key>Identifier</key>
+            <string>productName</string>
+            <key>Type</key>
+            <string>static</string>
+        </dict>
+    </array>
+    <key>Summary</key>
+    <string>Create VIPER Module Template</string>
+    <key>Substitutions</key>
+    <dict>
+        <key>___VARIABLE_ModuleName___</key>
+        <string>___VARIABLE_productName:identifier___</string>
+    </dict>
+    <key>Children</key>
+    <array>
+        <dict>
+            <key>Group</key>
+            <string>___VARIABLE_ModuleName___</string>
+            <key>Children</key>
+            <array>
+                <dict>
+                    <key>Path</key>
+                    <string>___FILEBASENAME___View.swift</string>
+                </dict>
+                <dict>
+                    <key>Path</key>
+                    <string>___FILEBASENAME___Presenter.swift</string>
+                </dict>
+                <dict>
+                    <key>Path</key>
+                    <string>___FILEBASENAME___Interactor.swift</string>
+                </dict>
+                <dict>
+                    <key>Path</key>
+                    <string>___FILEBASENAME___Router.swift</string>
+                </dict>
+                <dict>
+                    <key>Path</key>
+                    <string>___FILEBASENAME___Contract.swift</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>
